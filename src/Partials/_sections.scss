@@ -1,0 +1,32 @@
+section {
+  background-color: $primaryColor;
+  height: 90vh;
+  overflow: auto;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .traccia {
+      background-color: $secondaryColor;
+      margin: 10px;
+      padding: 15px;
+      width: calc(100% / 5);
+      color: $textColor;
+
+      .copertina {
+        width: 100%;
+      }
+
+      .testo {
+        text-align: center;
+        padding: 5px;
+
+        h3 {
+        color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 header {
   background-color: $secondaryColor;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   .logo {
     height: 50px;
-    margin: 10px 0;
   }
 }
