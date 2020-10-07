@@ -15,6 +15,14 @@ section {
       width: calc(100% / 5);
       color: $textColor;
 
+      &:hover {
+        background: rgba(255,255,255, 0.3);
+      }
+
+      &:hover .testo {
+        color: $primaryColor;
+      }
+
       .copertina {
         width: 100%;
       }

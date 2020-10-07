@@ -38,6 +38,12 @@ section .wrapper .traccia {
   width: calc(100% / 5);
   color: #62666B;
 }
+section .wrapper .traccia:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+section .wrapper .traccia:hover .testo {
+  color: #1E2D3B;
+}
 section .wrapper .traccia .copertina {
   width: 100%;
 }
