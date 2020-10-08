@@ -5,7 +5,7 @@
 ?>
 <body>
     <?php
-        include "partials/header.php";
+        include "partials/headerBonus.php";
         include "partials/handlebarsSection.php";
         include "partials/handlebarsScript.php";
     ?>

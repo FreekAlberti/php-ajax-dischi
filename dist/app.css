@@ -14,10 +14,14 @@ header {
   background-color: #2E3A46;
   height: 10vh;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
-header .logo {
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
   height: 50px;
 }
 
