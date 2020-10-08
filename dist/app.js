@@ -16092,8 +16092,22 @@ var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebar
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 $(document).ready(function () {
-  alert();
+  chiamataAjax();
 });
+
+function chiamataAjax() {
+  $.ajax({
+    "url": "http://localhost/php-ajax-dischi/api.php",
+    "method": "GET",
+    "success": function success(data) {
+      var risultatiAPI = data;
+      console.log(risultatiAPI);
+    },
+    "error": function error(richiesta, stato, errori) {
+      console.log(errori);
+    }
+  });
+}
 
 /***/ }),
 
