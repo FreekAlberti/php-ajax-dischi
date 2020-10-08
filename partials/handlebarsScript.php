@@ -8,3 +8,7 @@
         </div>
     </div>
 </script>
+
+<script id="author-template" type="text/x-handlebars-template">
+    <option value="{{author}}">{{author}}</option>
+</script>

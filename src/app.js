@@ -3,6 +3,7 @@ const $ = require("jquery");
 
 $(document).ready(function() {
     chiamataAjax();
+    sceltaAutore();
  });
 
 function chiamataAjax() {
@@ -28,6 +29,7 @@ function renderDB(risultatiAPI) {
         var author = risultatiAPI[i]["author"];
         var year = risultatiAPI[i]["year"];
         var album = $("#album");
+        var selezione = $("#select-author");
         //HANDLEBARS
         var source = $("#album-template").html();
         var template = Handlebars.compile(source);
@@ -39,5 +41,21 @@ function renderDB(risultatiAPI) {
         };
         var html = template(context);
         album.append(html);
+
+        //HANDLEBARS
+        var source = $("#author-template").html();
+        var template = Handlebars.compile(source);
+        var context = {
+            author: author
+        };
+        var html = template(context);
+        selezione.append(html);
     }
 }
+
+// function sceltaAutore() {
+//     var selettore = $("#select-author");
+//     selettore.change(function() {
+//         $(this).val();
+//     })
+// }
