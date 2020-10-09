@@ -16113,19 +16113,25 @@ function chiamataAjax() {
 
 
 function renderDB(risultatiAPI) {
+  var authors = [];
+
   for (var i = 0; i < risultatiAPI.length; i++) {
     //HANDLEBARS
     renderAlbum(risultatiAPI, i); //HANDLEBARS
 
     var author = risultatiAPI[i]["author"];
-    var selezione = $("#select-author");
-    var source = $("#author-template").html();
-    var template = Handlebars.compile(source);
-    var context = {
-      author: author
-    };
-    var html = template(context);
-    selezione.append(html);
+
+    if (!authors.includes(author)) {
+      var selezione = $("#select-author");
+      var source = $("#author-template").html();
+      var template = Handlebars.compile(source);
+      var context = {
+        author: author
+      };
+      var html = template(context);
+      selezione.append(html);
+      authors.push(author);
+    }
   }
 } //valore autore selezionato utente
 
